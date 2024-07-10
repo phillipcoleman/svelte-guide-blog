@@ -2,6 +2,16 @@
 	import MoonIcon from '$lib/components/svg/MoonIcon.svelte';
 	import SunIcon from '$lib/components/svg/SunIcon.svelte';
 	import { darkmode } from '$lib/stores/darkmode';
+	import { slide } from 'svelte/transition';
+
+	let inTransition = {
+		duration: 200,
+		delay: 200
+	};
+
+	let outTransition = {
+		duration: 200
+	};
 
 	function toggleDarkmode() {
 		if ($darkmode) {
@@ -16,13 +26,14 @@
 	}
 </script>
 
-<button
-	class="p-2 rounded-lg text-purple-800 hover:bg-gray-100 dark:text-yellow-200 dark:hover:bg-gray-800"
-	on:click={toggleDarkmode}
->
+<button class="p-2 text-purple-800 dark:text-yellow-200" on:click={toggleDarkmode}>
 	{#if $darkmode}
-		<SunIcon class="w-8 h-8 fill-current" />
+		<div in:slide={inTransition} out:slide={outTransition}>
+			<SunIcon class="w-8 h-8 fill-current" />
+		</div>
 	{:else}
-		<MoonIcon class="w-8 h-8 fill-current" />
+		<div in:slide={inTransition} out:slide={outTransition}>
+			<MoonIcon class="w-8 h-8 fill-current" />
+		</div>
 	{/if}
 </button>

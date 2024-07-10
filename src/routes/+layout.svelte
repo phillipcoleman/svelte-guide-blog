@@ -1,4 +1,6 @@
 <script lang="ts">
+	import MainHeader from '../lib/components/MainHeader.svelte';
+
 	import DarkmodeButton from '../lib/components/DarkmodeButton.svelte';
 	import IconLink from '$lib/components/IconLink.svelte';
 	import GitIcon from '$lib/components/svg/GitIcon.svelte';
@@ -21,27 +23,7 @@
 </script>
 
 <ThemeInitializer>
-	<header
-		class="fixed z-10 top-0 inset-x-0 border-b
-        bg-white dark:bg-dark-background dark:border-gray-800"
-	>
-		<nav
-			class="flex items-center justify-between max-w-5xl
-        mx-auto px-4 h-24"
-		>
-			<a href="/">
-				<Logo class="w-16 h-16 text-gray-700 dark:text-white" />
-			</a>
-
-			<div class="flex space-x-1 items-center">
-				<DarkmodeButton />
-
-				<IconLink target="_blank" href="/">
-					<GitIcon class="w-8 h-8 fill-current" />
-				</IconLink>
-			</div>
-		</nav>
-	</header>
+	<MainHeader />
 
 	<main>
 		<slot />
