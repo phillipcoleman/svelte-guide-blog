@@ -6,6 +6,7 @@ export type MarkdownPost = {
         imageUrl: string;
         publishedAt: string;
         summary: string;
+        author: string;
     };
 
     default: ComponentType;

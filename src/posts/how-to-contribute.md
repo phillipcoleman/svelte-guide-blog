@@ -3,6 +3,7 @@ title: "How To Contribute"
 imageUrl: "/post-images/how-to-contribute.png"
 publishedAt: "2024-07-10"
 summary: "An initial guide to contributing to this website in its infant stages."
+author: "Phillip Coleman"
 ---
 
 ## What is the purpose of this website?
