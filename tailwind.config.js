@@ -9,8 +9,12 @@ export default {
       }
     },
   },
+  corePlugins: {
+    aspectRatio: true,
+  },
   plugins: [
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio")
   ],
 }
 

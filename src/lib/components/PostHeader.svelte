@@ -6,11 +6,13 @@
 </script>
 
 <header class="p-4">
-	<div class="w-full sm:w-3/5 mb-6">
-		<div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-			<img src={metadata.imageUrl} alt={metadata.title} class="object-cover" />
+	{#if metadata.imageUrl}
+		<div class="w-full sm:w-3/5 mb-6">
+			<div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden border">
+				<img src={metadata.imageUrl} alt={metadata.title} class="object-cover" />
+			</div>
 		</div>
-	</div>
+	{/if}
 
 	<div>
 		<h1 class="text-4xl font-bold mb-4">
@@ -21,6 +23,7 @@
 			<time class="font-light" datetime={metadata.publishedAt}>
 				{formatPublishedAt(metadata.publishedAt)}
 			</time>
+			<span class="font-light">by {metadata.author}</span>
 		</div>
 	</div>
 </header>
