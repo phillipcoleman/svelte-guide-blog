@@ -1,6 +1,5 @@
 <script lang="ts">
 	import PostHeader from '$lib/components/PostHeader.svelte';
-	import { formatPublishedAt } from '$lib/utils/dates';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

@@ -25,5 +25,8 @@
 			</time>
 			<span class="font-light">by {metadata.author}</span>
 		</div>
+		<div>
+			{metadata.readingTime.text}
+		</div>
 	</div>
 </header>

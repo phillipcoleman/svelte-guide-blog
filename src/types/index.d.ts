@@ -7,6 +7,9 @@ export type MarkdownPost = {
         publishedAt: string;
         summary: string;
         author: string;
+        readingTime: {
+            text: string;
+        }
     };
 
     default: ComponentType;
