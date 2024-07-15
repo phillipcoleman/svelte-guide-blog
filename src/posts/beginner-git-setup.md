@@ -68,3 +68,9 @@ To verify that Git was installed successfully, open a command prompt or terminal
 ```bash
 git --version
 ```
+
+```csharp
+public class Test {
+    public string Text { get; set; }
+}
+```
